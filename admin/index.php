@@ -186,12 +186,6 @@ $(".select2").select2({
     } ).draw();
 } );
 </script>
-<!-- area script -->
-<script src="area/script.js"></script>
-
-<!-- group script เลือกกลุ่มพืช-->
-<script src="group/script.js"></script>
-
 
 </body>
 </html>

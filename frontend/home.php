@@ -5,7 +5,7 @@ $query = "SELECT * FROM $table ORDER BY view_count DESC LIMIT 5" or die("Error:"
 ?>
 <div class="row">
 <div class="col-md-12">
-              <div class="card">
+              <div class="card card-primary card-outline">
                 <div class="card-header">
                   <h3 class="card-title">เข้าชมสูงสุด <i class="fab fa-gripfire"></i></h3>
                 </div>
@@ -44,7 +44,7 @@ $query2 = "SELECT * FROM $table ORDER BY download_count DESC LIMIT 5" or die("Er
 ?>
         <div class="row">
           <div class="col-md-12">
-              <div class="card">
+              <div class="card card-primary card-outline">
                 <div class="card-header">
                   <h3 class="card-title">ดาวน์โหลดสูงสุด <i class="fas fa-star"></i></h3>
                 </div>

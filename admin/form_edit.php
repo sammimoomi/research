@@ -70,82 +70,11 @@ include ('head.php');
                     <input type="file" class="form-control" name="upload1"  value="<?php echo $row['file_name'];?>"><br>
         </div>
       </div>
-
-
             </div>
           </div>
         </div>
-
-
           <button type="submit"  name="update" class="btn btn-info float-right"><i class="glyphicon glyphicon-edit"></i> แก้ไขข้อมูล</button>
-
       </form>
-<?php
-      $id=$_REQUEST['id'];
-      //upload รูปที่1----------------------------------------------------------------
-      if (isset($_POST['img1'])) {
-
-        $image1 = $_FILES["image1"] ["name"];
-        $image_name1= addslashes($_FILES['image1']['name']);
-        $size1 = $_FILES["image1"] ["size"];
-        move_uploaded_file($_FILES["image1"]["tmp_name"],"../frontend/img/" . $_FILES["image1"]["name"]);			
-        $image_location_update1=$_FILES["image1"]["name"];
-
-        $sql = "UPDATE $table SET 
-      photo_name1 = '$image_location_update1'
-      WHERE id = '$id'";
-      mysqli_query($conn, $sql);
-      echo "<meta http-equiv='refresh' content='0'>";
-          exit;
-      }
-      //upload รูปที่2----------------------------------------------------------------
-      if (isset($_POST['img2'])) {
-
-        $image2 = $_FILES["image2"] ["name"];
-        $image_name2= addslashes($_FILES['image2']['name']);
-        $size2 = $_FILES["image2"] ["size"];
-        move_uploaded_file($_FILES["image2"]["tmp_name"],"../frontend/img/" . $_FILES["image2"]["name"]);			
-        $image_location_update2=$_FILES["image2"]["name"];
-
-        $sql = "UPDATE $table SET 
-      photo_name2 = '$image_location_update2'
-      WHERE id = '$id'";
-      mysqli_query($conn, $sql);
-      echo "<meta http-equiv='refresh' content='0'>";
-          exit;
-        }
-        if (isset($_POST['update'])) {
-
-
-          $name_th= $_POST['name_th'];
-          $name_en= $_POST['name_en'];
-          $scientific_name=$_POST['scientific_name'];
-          $other_names=$_POST['other_names'];
-
-          $leaves=$_POST['leaves'];
-          $trunk= $_POST['trunk'];
-          $bouquet= $_POST['bouquet'];
-          $fruit= $_POST['fruit'];
-          $planting_area= $_POST['planting_area']; 
-
-        
-        $sql = "UPDATE $table SET 
-        name_th = '$name_th',
-        name_en = '$name_en',
-        scientific_name = '$scientific_name',
-        other_names = '$other_names',
-        leaves = '$leaves',
-        trunk = '$trunk',
-        bouquet = '$bouquet',
-        fruit = '$fruit',
-        planting_area = '$planting_area'
-         WHERE id = '$id'";
-        mysqli_query($conn, $sql);
-        
-            echo "<script>window.location.href='index.php';</script>";
-            exit;
-        }
-      ?>
     </div>
   </div>
 </div>

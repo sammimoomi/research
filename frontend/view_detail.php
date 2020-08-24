@@ -16,7 +16,7 @@ $result2 = mysqli_query($conn, $sql2);
   <div class="card-body ">
   <div class="row no-gutters">
     <div class="col-md-3">
-      <img src="1.jpg" class="card-img" alt="...">
+      <img src="frontend/img/1.jpg" class="card-img" alt="...">
     </div>
     <div class="col-md-9">
       <div class="card-body">
@@ -44,12 +44,7 @@ $result2 = mysqli_query($conn, $sql2);
         <p><B>หน่วยงาน : </B><small><?php echo $row['department'];?></small></p>
         <p><B>จำนวนผู้อ่าน : </B><small><?php echo $row['view_count'];?></small><B> ครั้ง</B></p>
 
-
         <hr>
-
-        <!-- <p class="card-text"><small class="text-muted"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $row['view'];?> View</small></p> -->
-        <!-- <p class="card-text"><small class="text-muted"><?php echo $row['year'];?></small></p> -->
-
       </div>
     </div>
 
